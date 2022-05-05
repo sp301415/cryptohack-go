@@ -17,7 +17,7 @@ func main() {
 	conn.PrintfLine(`{"buy":"flag"}`)
 
 	res_line, _ := conn.ReadLine()
-	res := make(map[string]string)
+	res := make(map[string]any)
 	json.Unmarshal([]byte(res_line), &res)
 	fmt.Println(res["flag"])
 }
